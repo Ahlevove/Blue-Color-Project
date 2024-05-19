@@ -1,0 +1,200 @@
+/*CATEGORIA HEADER 1 ABERTA (BARRA SUPERIOR COM DROPDOWN)*/
+
+/*Lista de topicos (Inordenados)*/
+.ul ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7ac3f1;
+
+  }
+  .li li{
+    float: left;
+  }
+
+/*Estilo do texto (ou link) inserido dentro do bloco*/
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+/*Cor ao passar o mouse encima do topico (Inordenado)*/
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(42, 107, 205);
+  }
+
+/*Estilo do texto inserido no Dropdown (Disposição)*/  
+  li.dropdown {
+    display: inline-block;
+  }
+
+/*Estilo do texto inserido no Dropdown (do texto, além de possuir a interação quando passa o mouse)*/  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+/*Estilo do link inserido no Dropdown*/ 
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+/*Disposição na página*/
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+/*CATEGORIA HEADER 1 FECHADA (BARRA SUPERIOR COM DROPDOWN)*/
+
+
+/*CATEGORIA HEADER 2 ABERTA (texto)*/
+
+.header {
+  text-align: center;
+  gap: 5rem;
+  height: 5rem;
+  color: #5485f6;
+}
+
+/*CATEGORIA HEADER 2 FECHADA (texto)*/
+
+/*SLIDES ABERTO*/ 
+
+/*Exposição das imagens (margem e espaçamento) e a exposição das imagens na página*/ 
+
+    /*100 vh e 100 vw são para adquirir o comprimento e a altura total da página automaticamente além de tirar certos bugs*/
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+/*Curvatura da borda, centralização a partir do posição absoluta e do transform (mexe o elemento em seu proprio eixo), limite e ocultação de elementos fora do limite estabelecido*/
+
+.slidecontent {
+  height: 520px;
+width: 935px;
+border-radius: 25px;
+overflow: hidden;
+position: relative;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+/*Estilização da barra de navegação inferior entre as imagens*/ 
+
+.navegation{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  z-index: 0;
+}
+
+
+.bar {
+  width: 70px;
+  height: 17px;
+  border: 2px solid white;
+  margin: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.bar:hover{
+  background-color: #fff;
+}
+
+input {
+  display: none;
+}
+
+.imagens {
+  display: flex;
+  width: 400%;
+  height: 100%;
+}
+
+.Imgslide{
+  width: 25%;
+  transition: .6s;
+} 
+
+.Imgslide img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Transição entre os slides*/ 
+
+#img1:checked ~ .s1 {
+  margin-left: 0%;
+}
+
+#img2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+#img3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+#img4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+/*Imagens uma ao lado da outra para a categoria 2 aberto*/ 
+
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Imagens lado a lado para a categoria 2 fechado*/ 
+
+/*Texto ao lado das imagens aberto*/
+.txt{
+  width: 100%; 
+  height: 100px;/* Aqui você pode alterar */
+  display: inline;
+  vertical-align: top;
+}
+/*Texto ao lado das imagens fechado*/
+
+/*Alinhamento do texto no "sobre" aberto*/
+
+.texto {
+  text-align: center;
+}
+/*Alinhamento do texto no "sobre" fechado*/
